@@ -1,13 +1,15 @@
 /*
- * @Description: In User Settings Edit
  * @Author: your name
- * @Date: 2019-09-17 10:40:00
- * @LastEditTime: 2019-10-22 17:50:02
+ * @Date: 2019-10-22 12:00:18
+ * @LastEditTime: 2019-10-24 11:39:21
  * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /c:\Users\123\Desktop\react_native_appc:\Users\123\Desktop\weekend_exhibition\src\router.js
  */
+
 import React, { Component } from 'react';
 import { Easing, Animated,Text,StyleSheet } from "react-native";
-import { createAppContainer, createDrawerNavigator } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator} from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { STATUS_BAR_HEIGHT,headerPaddingTop,headerHeight } from './assets/css/common';
@@ -15,10 +17,15 @@ import { STATUS_BAR_HEIGHT,headerPaddingTop,headerHeight } from './assets/css/co
 
 
 //路由文件
-
 import HomePage from './pages/HomePage/html';
 import MinePage from './pages/MinePage/html';
 import ExhibitionList from './pages/ExhibitionList/html';
+import MyAttention from './pages/MyAttention/html';
+import ExhibitionDetail from './pages/ExhibitionDetail/html';
+
+import AboutPage from './pages/SystemPage/AboutPage';
+import UserAgreement from './pages/SystemPage/UserAgreement';
+import SettingPage from './pages/SystemPage/SettingPage';
 
 //底部tabbar的图标
 const getTabBarIcon = (navigation, focused, tintColor) => {
@@ -38,6 +45,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 //底部tabbar
 const TabNavigator = createBottomTabNavigator(
     {
+        
         展讯: createStackNavigator(
             {
                 HomePage: {
@@ -49,7 +57,7 @@ const TabNavigator = createBottomTabNavigator(
         ),
         我的: createStackNavigator(
             {
-                RumMinePageors: {
+                MinePage: {
                     screen: MinePage,
                     navigationOptions: {
                         header: null,
@@ -63,6 +71,7 @@ const TabNavigator = createBottomTabNavigator(
             {
                 tabBarIcon: ({ focused, tintColor }) =>
                     getTabBarIcon(navigation, focused, tintColor),
+                    
             }
         ),
         tabBarOptions: {
@@ -90,7 +99,35 @@ export const router = createStackNavigator(
         ExhibitionList:{
             screen: ExhibitionList,
             navigationOptions: {
-                title: '展览列表',
+                //title: '展览列表',
+            },
+        },
+        MyAttention:{
+            screen: MyAttention,
+            navigationOptions: {
+                title: '关注的展览',
+            },
+        },
+        ExhibitionDetail:{
+            screen: ExhibitionDetail,
+            navigationOptions: {},
+        },
+        AboutPage:{
+            screen: AboutPage,
+            navigationOptions: {
+                title: '关于 | 周末看展',
+            },
+        },
+        UserAgreement:{
+            screen: UserAgreement,
+            navigationOptions: {
+                title: '用户协议',
+            },
+        },
+        SettingPage:{
+            screen: SettingPage,
+            navigationOptions: {
+                title: '设置',
             },
         }
     },
@@ -103,8 +140,8 @@ export const router = createStackNavigator(
                 paddingTop: headerPaddingTop,
                 elevation: 0,  // android去除阴影
                 backgroundColor:"#fff",
-                //borderBottomWidth:1,
-                //borderBottomColor:'#F1EEE9'
+                borderBottomWidth:1,
+                borderBottomColor:'#F1EEE9'
             },
             headerTitleStyle: {
                 fontWeight: 'normal',
@@ -121,3 +158,4 @@ const styles = StyleSheet.create({
         fontSize: 25,
     }
 })
+

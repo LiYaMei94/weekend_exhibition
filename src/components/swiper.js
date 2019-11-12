@@ -1,10 +1,12 @@
 /*
- * @Description: In User Settings Edit
  * @Author: your name
- * @Date: 2019-10-18 17:26:00
- * @LastEditTime: 2019-10-22 15:25:52
+ * @Date: 2019-10-22 14:40:20
+ * @LastEditTime: 2019-10-23 11:35:43
  * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /c:\Users\123\Desktop\react_native_appc:\Users\123\Desktop\weekend_exhibition\src\components\swiper.js
  */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -108,7 +110,7 @@ export default class Swiper extends Component{
         this.stopAutoPlay()
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if(JSON.stringify(nextProps)==JSON.stringify(this.props)) return;
         this.stopAutoPlay()
         const { dataSource, width, height, horizontal, offset,index, loop, ratio, autoplayTimeout, autoplayDirection, cardParams } = nextProps;

@@ -1,9 +1,10 @@
 /*
- * @Description: In User Settings Edit
  * @Author: your name
- * @Date: 2019-09-16 17:29:20
- * @LastEditTime: 2019-10-22 15:00:15
- * @LastEditors: Please set LastEditors
+ * @Date: 2019-10-22 10:52:04
+ * @LastEditTime: 2019-10-23 11:33:43
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /c:\Users\123\Desktop\react_native_appc:\Users\123\Desktop\weekend_exhibition\App.js
  */
 
 

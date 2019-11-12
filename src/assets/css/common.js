@@ -1,11 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2019-10-22 13:47:01
- * @LastEditTime: 2019-10-22 15:28:30
+ * @LastEditTime: 2019-10-23 17:12:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /c:\Users\123\Desktop\react_native_appc:\Users\123\Desktop\weekend_exhibition\src\assets\css\common.js
  */
+
 import React, { Component } from 'react';
 import { StatusBar, Platform, Dimensions } from "react-native";
 //判断手机设备
@@ -44,11 +45,12 @@ export const Size = Dimensions.get('window');
 export const ScreenWidth = Size.width;
 export const ScreenHeight = Size.height;
 
-//export const themeColor="#57AEF2";//主题色
 
 export const borderColor='#EEEDEB';
 
 export const greyBG='#F3F3F3';
+
+export const themeColor='#FBB03B';
 
 export const globalStyle={
   iconFont:{
